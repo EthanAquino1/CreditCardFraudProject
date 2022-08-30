@@ -8,12 +8,12 @@ Importing libraries: The libraries I will be using for this project will be nump
 
 Inspecting the dataset: First, I import the dataset with pandas and read in the head of the dataset. I can see that the data had undergone PCA and has seemed to be scaled as well, eliminating the necessity to do this later although can be simple added with a StandardScaler. I then continue inspecting some important features such as mean and standard deviation, and then split the data by normal and fraud cases to check their important features as well. Next I move on to check if there is any missing data, which seems to be contained in one row. I simply remove this one row, leaving us with a clean dataset.  
 
-Visualizing the data:
+Visualizing the data: My next step was to visualize some of the data, but due to PCA it was unnecessaary to do much except use seaborn to create a heatmap of the correlations. I used this heatmap on the dataset as a whole, and then seperatly on the normal and fraud cases, where I was able to view some of the more correlated data points. 
 
-Data preprocessing:
+Data preprocessing: 
 
-Model testing:
+Model testing: 
 
-Grid search and cross validation:
+Grid search and cross validation: 
 
-Final model selection:
+Final model selection: 
