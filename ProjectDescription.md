@@ -4,9 +4,9 @@ Buisness problem: The problem I will be trying to tackle is dealing with credit 
 
 Plan of attack: In order to tackle this problem, we will first visualize and inspect the dataset, as well as look at any possible correlations within the dataset. We will also make sure that the dataset is cleaned and that no data is missing. We will then focus on model testing and making sure we have the best parameters necessaary for the most accurate version of our model. 
 
-Importing libraries: 
+Importing libraries: The libraries I will be using for this project will be numpy, pandas, matplotlib, and seaborn.
 
-Inspecting the dataset:
+Inspecting the dataset: First, I import the dataset with pandas and read in the head of the dataset. I can see that the data had undergone PCA and has seemed to be scaled as well, eliminating the necessity to do this later although can be simple added with a StandardScaler. I then continue inspecting some important features such as mean and standard deviation, and then split the data by normal and fraud cases to check their important features as well. Next I move on to check if there is any missing data, which seems to be contained in one row. I simply remove this one row, leaving us with a clean dataset.  
 
 Visualizing the data:
 
