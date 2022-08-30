@@ -4,16 +4,16 @@ Buisness problem: The problem I will be trying to tackle is dealing with credit 
 
 Plan of attack: In order to tackle this problem, we will first visualize and inspect the dataset, as well as look at any possible correlations within the dataset. We will also make sure that the dataset is cleaned and that no data is missing. We will then focus on model testing and making sure we have the best parameters necessaary for the most accurate version of our model. 
 
-Importing libraries: The libraries I will be using for this project will be numpy, pandas, matplotlib, and seaborn.
+Importing libraries: The libraries I will be using for this project will be numpy, pandas, matplotlib, seaborn, and scikit-learn.
 
 Inspecting the dataset: First, I import the dataset with pandas and read in the head of the dataset. I can see that the data had undergone PCA and has seemed to be scaled as well, eliminating the necessity to do this later although can be simple added with a StandardScaler. I then continue inspecting some important features such as mean and standard deviation, and then split the data by normal and fraud cases to check their important features as well. Next I move on to check if there is any missing data, which seems to be contained in one row. I simply remove this one row, leaving us with a clean dataset.  
 
 Visualizing the data: My next step was to visualize some of the data, but due to PCA it was unnecessaary to do much except use seaborn to create a heatmap of the correlations. I used this heatmap on the dataset as a whole, and then seperatly on the normal and fraud cases, where I was able to view some of the more correlated data points. 
 
-Data preprocessing: 
+Data preprocessing: Before I begin building my model, I made sure to split my data using train_test_split from scikit-learn, with a 30% split.
 
-Model testing: 
+Model testing: My next step was to do some basic model testing, to see how the accuracy would be with base models. I picked 5 models: Logistic Regression, Decision Tree, Random Forest, AdaBoost, and GradientBoost. I then created a function that would run the model with the data, and output some metrics to help visualize the accuracy. The metrics I chose were the classification report, to help me see the recall and f1-score, and the confusion matrix, to really help me visualize what was happening in the model. After testing, the two best models seemed to be the Random Forest and the AdaBoost models. The Decision Tree model seemed to have the best recall score, however the f1-score was not as accurate. 
 
-Grid search and cross validation: 
+Grid search and cross validation: My next step was to run some grid search cross validation models, in order to check the best parameters to yield the most accurate and most efficient models.
 
-Final model selection: 
+Final model selection: After running the grid search for each model, I reran our function from earlier and came to the conclusion that the random forest model with the selected parameters of 128 n_estimators, 4 max_features, and with boostrap and oob_score set to false, we would get the most accurate model with a recall score of 78% and f1-score of 85%. While extremely difficult to get high accuracy with imbalanced data, being able to run our random forest and get the accuracy we got was a success. We finalized and saved the model after testing.  
